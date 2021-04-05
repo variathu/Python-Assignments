@@ -1,0 +1,92 @@
+BASIC LEVEL
+
+1. What command is used to get the IP addresses of all interfaces on a server? ifconfig
+2. What is the purpose of "mv" command? ‘mv’ is used to rename/move a file to another location
+3. Which command is used to create a new empty file? touch filename
+4. Which command is used to display the contents of a directory? ls
+5. Which command is used to display all the file names along with their types of the current directory? ls -l
+6. Which command is used to clear the terminal? clear
+7. What are daemons? Computer program that runs as a background process
+8. Which command is used to move to the parent directory?cd ..
+9. What does echo command do? ‘echo’ is used to display a string
+10.How to display content of a file? cat filename
+11. How to identify which shell you are using? echo “$SHELL”
+12. How do you check if a particular service is running? #service httpd status
+13.What is the command to run a program with elevated permissions? sudo
+14.Which command is used to display the path of the current working directory? pwd
+15. How to delete a directory forcefully? rm -rf directoryname
+16.Which command is used to switch from superuser to normal user? su username or exit
+17. How to switch to superuser (root) with elevated permissions? sudo
+18.How to determine the type of a file? file filename
+
+INTERMEDIATE LEVEL
+
+1. What are the different modes when using VI editor? Entry and command mode
+2. Which command is used to create multiple directories simultaneously? mkdir -p
+3. What is LILO? Linux Loader is used to load Linux into memory.
+4. How cd ~, cd / and cd - are different from each other? Cd~ changes to the previous directory, cd / takes you back to the root directory and cd - prints while performing 
+   the same action as cd ..
+5. What is a grep command? grep is used to search plain-text data within a file.
+6. If we are in the directory X and we are running rmdir X being in that directory X. Will this command successfully remove the directory or not? No, you will have to exit 
+   the directory inorder to delete it.
+7. What are the contents of /usr/local? bin (local binaries), etc (host-specific system configuration for local binaries), games (local game binaries), include (local C header
+   files), lib (local libraries), man (local online manuals), sbin (local system binaries), share (local architecture-independent hierarchy), src (local source code).
+8. Which command is used to display the current username? whoami
+9. What command is used to change your password? passwd username
+10. How to find the difference in two configuration files? diff or vim command
+11. How to find where a file is located in Linux? locate file
+12. Which command shows the users that are logged in? w command
+13. How to forcefully stop a process which is running in the background? kill pid
+14. Which command is used to list the name of files starting from any particular alphabet or string? find. -name filename
+15. How to move multiple files of the same extension to a different directory? mv dir1/*.{doc,pdf} dir2/
+16. What command would you use to check how much memory is being used ? free
+17. Which command is used to display the list of content in reverse order? rev or ls -r
+18. What command is used to show how long it's been since the server was rebooted? last reboot
+19. What command is used to change the ownership of a file? chown
+
+ADVANCED LEVEL
+
+1. How to see the list of mounted devices on a Linux system? findmnt
+2. How to check disk usage in terms of kilobytes(K), megabytes(M) and gigabytes(G)? df -h
+3. What is Swap Space?What is a typical size for a swap partition in Linux? Swap space is used when the amount of physical memory (RAM) is full. Inactive memory is moved to
+   swap space. Typical size for a swap partition is twice the size of RAM if RAM is less than 2 GB else size of RAM + 2 GB.
+4. How would you schedule a task in Linux? There are two ways to schedule a task in Linux
+   Cron Daemon is responsible for running a lot of jobs at specific times and generally runs in the background.at scheduled times.
+   ‘At’ at offers the ability to run a command/script at a specific time or at a fixed interval
+5. How these commands would be working try and explain (files contain “hello” word) :
+   grep -v -i hello file1.txt
+   Output would be empty, this command prints everything except the word hello, since the file only contains hello, nothing is outputted.
+   grep -i hello file2.txt
+   This command prints lines with a matching pattern and highlights the pattern, so the output is hello.
+   grep -A 2 hello file2.txt
+   This command will print 2 lines after the matching pattern ‘hello’ is found in the file.
+   grep -C 4 hello file1.txt
+   This command is usually used to display the number of times a pattern is repeated within a file.
+   grep -B 3 hello file1.txt
+   This command is used to display 3 lines before the word hello appears in file1.txt
+   ps -ef | more
+   This command is used to display the process id of each process
+   awk '{print $2,$5;}' employee.txt
+   This command is used to print only certain columns (2 and 5 in this case) considering this file only had ‘hello’ in it, nothing is printed as an output.
+6. What is the export command used for?(Give Example) It is used to ensure the environment variables and functions are passed on to child processes. For example, ‘export’
+   displays all exported variables and ‘export -p’ displays exported variables on the current shell.
+7. Explain the redirection operator? Redirection is a feature in Linux such that when executing a command, you can change the standard input/output devices. There are two
+   kinds of redirection, the output redirection and input redirection. The ‘>’ symbol is used for output redirection while ‘<’ is used for input redirection.
+8. Which command is used to review boot messages? dmesg
+9. Which command is used to change the permissions of a file?Explain its usage? chmod octal file, this command is used to change permissions of a file to read, write and/or
+   execute. Octal digits are assigned to each permission 4 for read, 2 for write and 1 for execute.
+10. Which command would you use to create a file system on a new hard drive? mkfs: extn4
+11. How to compress files in Linux? There are 5 commands to compress files in Linux, namely, tar, zip, gzip, bzip2, xz
+12. Which file is used to automatically mount file systems on boot? File systems listed in the /etc/fstab file are automatically mounted whenever you boot, unless this feature
+    is explicitly turned off with the noauto option.
+13. Find out the purpose of each of the following commands:
+    Shutdown is used to shutdown the system in a safe way.
+    Diff is used to compare two files line by line.
+    Sort is used to sort the contents of a file line by line.
+    Ps (process status) is used to display/view information related to the processes running in a linux system.
+    Kill is used to terminate processes manually.
+    Mount is used to mount filesystems found on a device to a structure.
+    Nano is a command line editor for Linux OS.
+14. What are symbolic links?How do you create one using command? Symbolic/soft links are special files that point to another file similar to a shortcut in Windows alias.
+    Unlike a hard link, a symbolic link contains no data in the target file. ln -s is the command to create symbolic links.
+15. How would you copy a file or a directory from your system to another system on the same network? ssh command scp is used to do so. scp FILE USER@SERVER_IP:/DIRECTORY
