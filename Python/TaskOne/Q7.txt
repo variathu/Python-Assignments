@@ -1,1 +1,11 @@
 Create Variables using formats such as Upper CamelCase, Lower CamelCase, SnakeCase and UPPERCASE.
+
+a='Testing material'
+lowCam='testingMaterial'
+UpCam='TestingMaterial'
+Snake='testing_material'
+UpCase='TESTING MATERIAL'
+print ("In lowercase camel:"lowCam)
+print ("In Uppercase camel or Pascal case:"UpCam)
+print ("In Snake Case:"Snake)
+print ("In Uppercase: "UpCase)
