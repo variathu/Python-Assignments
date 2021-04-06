@@ -1,1 +1,3 @@
 If one data type value is assigned to ‘a’ variable and then a different data type value is assigned to ‘a’ again. Will it change the value? If Yes then Why?
+
+Yes, variable 'a' is reassigned to a new value that is of different datatype from the previous value, hence the value will change.
