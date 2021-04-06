@@ -1,3 +1,5 @@
 Write a program to check the data type of the entered values.
 HINT: Printed output should say - The data type of the input value is : int/float/string/etc
 
+a=input ("Enter an input:")
+print("The datatype of the input is ",type(a))
